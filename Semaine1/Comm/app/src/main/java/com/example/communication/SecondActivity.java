@@ -6,21 +6,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class SecondActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        EditText et = findViewById(R.id.info);
-        Button btn = findViewById(R.id.submitInfo);
-        btn.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_second);
+        TextView tv = findViewById(R.id.tvinfo);
+        tv.setText(getIntent().getStringExtra("info"));
+        Button btnRetour = findViewById(R.id.btnReturn);
+        btnRetour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(),SecondActivity.class);
-                i.putExtra("info",et.getEditableText().toString());
+                Intent i = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(i);
             }
         });
