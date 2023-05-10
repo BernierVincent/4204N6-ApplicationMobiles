@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Traductions</string>
+    <string name="rock">ROCK</string>
+    <string name="paper">PAPER</string>
+    <string name="cisors">CISORS</string>
+    <string name="pink">Pink</string>
+</resources>
